@@ -105,20 +105,20 @@
                         dignissimos dolores, dolorum esse excepturi impedit inventore minus obcaecati perferendis quasi
                         recusandae sequi sunt suscipit totam veniam!</p>
                 </article>
-                <section class="wrapper flex-container">
-                    <div class="flip3D">
-                        <div class="back">Box 1 - Back</div>
-                        <div class="front">Box 1 - Front</div>
-                    </div>
-                    <div class="flip3D">
-                        <div class="back">Box 2 - Back</div>
-                        <div class="front">Box 2 - Front</div>
-                    </div>
-                    <div class="flip3D">
-                        <div class="back">Box 3 - Back</div>
-                        <div class="front">Box 3 - Front</div>
-                    </div>
-                </section>
+                    <!--<section class="wrapper flex-container">-->
+                        <!--<div class="flip3D">-->
+                            <!--<div class="back">Box 1 - Back</div>-->
+                            <!--<div class="front">Box 1 - Front</div>-->
+                        <!--</div>-->
+                        <!--<div class="flip3D">-->
+                            <!--<div class="back">Box 2 - Back</div>-->
+                            <!--<div class="front">Box 2 - Front</div>-->
+                        <!--</div>-->
+                        <!--<div class="flip3D">-->
+                            <!--<div class="back">Box 3 - Back</div>-->
+                            <!--<div class="front">Box 3 - Front</div>-->
+                        <!--</div>-->
+                    <!--</section>-->
             </div>
 
         </section>
@@ -129,19 +129,19 @@
         </footer>
     </main>
 </div>
-<script>
+<script async>
     var header, logo, yPos;
     function yScroll() {
         header = document.getElementById('header');
         logo = document.getElementById('logo');
-        link = document.getElementsByClassName("link"); //Strange, but for some reason class id's only work with "-s
+        link = document.getElementsByClassName("link");
         yPos = window.pageYOffset;
         if(yPos > 150) {
             header.style.height = "64px";
             header.style.paddingTop = "0px";
             logo.style.fontSize = "20px";
-            for( var i = 0; i < link.length; i++) { // The for-loop gets each link
-                link[i].style.fontSize = "12px";    // then sets the font style to each link
+            for( var i = 0; i < link.length; i++) {
+                link[i].style.fontSize = "10px";
             }
         } else {
             header.style.height="120px";

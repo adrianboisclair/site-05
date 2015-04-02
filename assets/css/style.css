@@ -75,7 +75,7 @@ header {
     font-size: 35px;
     padding: .5em;
     color: darkslategray;
-    transition: font-size .3s;
+    transition: font-size .2s;
 
 }
 
@@ -197,8 +197,8 @@ article {
     max-width: 200px;
     min-width: 200px;
     height: 300px;
-    /*padding: 1em;*/
-    /*margin: 1em;*/
+    margin-left: 1em;
+    margin-right: 1em;
     border: outset 1px lightgray;
 
 }
@@ -242,7 +242,7 @@ article {
 }
 
 /* Flip Boxes*/
-
+/* In Development Phase */
 .flip3D {
     width: 240px;
     height: 200px;
