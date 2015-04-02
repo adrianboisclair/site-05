@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="description" content="Full Screen Image Wep Page">
+    <meta name="keywords" content="A full screen image web page in HTML CSS and JS">
+    <meta name="author" content="Adrian Boisclair">
+    <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="nav-bar" id="header">
+        <div class="container flex-container" id="nav-nav-bar">
+            <div class="logo" id="logo">Boisclair Computer Repair</div>
+            <a class="link" href="#">Home</a>
+            <a class="link" href="#">About</a>
+            <a class="link" href="#">Blog</a>
+            <a class="link" href="#">Store</a>
+            <a class="link" href="#">Forum</a>
+        </div>
+    </header>
+    <main>
+        <section class="module parallax parallax-1">
+            <div class="container"></div>
+        </section>
+        <section class="module content">
+            <div class="flex-container tag-line">
+                <div class="wrap">
+                    <h2>Need help with your PC?</h2>
+                    <a class="link-btn" href="#">Contact Us!</a>
+                </div>
+            </div>
+        </section>
+        <section class="wrapper flex-container">
+            <div class="flex-wrap featured-articles">
+                <article id="article-1">
+                </article>
+                <article id="article-2">
+                </article>
+                <article id="article-3">
+                </article>
+                <article id="article-4">
+                </article>
+            </div>
+        </section>
+        <section class="module content wrapper">
+            <div class="container blog-articles">
+                <article>
+                    <h1>
+                        Article Header
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet, aspernatur, consequatur
+                        corporis excepturi explicabo maiores numquam officiis perferendis praesentium saepe soluta
+                        tenetur
+                        velit. Dolores eos ipsa neque sint temporibus!</p>
+                </article>
+                <article>
+                    <h1>
+                        Article Header
+                    </h1>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aspernatur assumenda, aut
+                        beatae
+                        ducimus eum fugiat, id impedit minus quos rerum tenetur unde veniam! Amet libero molestiae
+                        numquam
+                        voluptate voluptates.</p>
+                </article>
+                <article>
+                    <h1>
+                        Article Header
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae consectetur consequuntur
+                        dolor
+                        dolorem eligendi harum ipsum labore natus neque nulla, obcaecati odit officiis omnis placeat
+                        quasi
+                        rem vel voluptatum!</p>
+                </article>
+                <article>
+                    <h1>
+                        Article Header
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dolores enim, esse eveniet
+                        excepturi
+                        labore nobis provident quibusdam quidem quis reiciendis repellendus, reprehenderit rerum
+                        suscipit
+                        vitae voluptatem voluptates. Culpa, quaerat?</p>
+                </article>
+                <article>
+                    <h1>
+                        Article Header
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci asperiores cum debitis
+                        dignissimos dolores, dolorum esse excepturi impedit inventore minus obcaecati perferendis quasi
+                        recusandae sequi sunt suscipit totam veniam!</p>
+                </article>
+                <article>
+                    <h1>
+                        Article Header
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci asperiores cum debitis
+                        dignissimos dolores, dolorum esse excepturi impedit inventore minus obcaecati perferendis quasi
+                        recusandae sequi sunt suscipit totam veniam!</p>
+                </article>
+                <section class="wrapper flex-container">
+                    <div class="flip3D">
+                        <div class="back">Box 1 - Back</div>
+                        <div class="front">Box 1 - Front</div>
+                    </div>
+                    <div class="flip3D">
+                        <div class="back">Box 2 - Back</div>
+                        <div class="front">Box 2 - Front</div>
+                    </div>
+                    <div class="flip3D">
+                        <div class="back">Box 3 - Back</div>
+                        <div class="front">Box 3 - Front</div>
+                    </div>
+                </section>
+            </div>
+
+        </section>
+
+        <footer>
+
+            Copyright © www.BoisclairCalifornia.com 2015 · Built for CIT-85
+        </footer>
+    </main>
+</div>
+<script>
+    var header, logo, yPos;
+    function yScroll() {
+        header = document.getElementById('header');
+        logo = document.getElementById('logo');
+        link = document.getElementsByClassName("link"); //Strange, but for some reason class id's only work with "-s
+        yPos = window.pageYOffset;
+        if(yPos > 150) {
+            header.style.height = "64px";
+            header.style.paddingTop = "0px";
+            logo.style.fontSize = "20px";
+            for( var i = 0; i < link.length; i++) { // The for-loop gets each link
+                link[i].style.fontSize = "12px";    // then sets the font style to each link
+            }
+        } else {
+            header.style.height="120px";
+            header.style.paddingTop = "50px";
+            logo.style.fontSize="35px";
+            for( var i = 0; i < link.length; i++) {
+                link[i].style.fontSize = "16px";
+            }
+        }
+    }
+    window.addEventListener("scroll", yScroll);
+</script>
+</body>
+</html>
