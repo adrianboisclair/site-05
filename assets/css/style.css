@@ -199,12 +199,13 @@ article {
     height: 300px;
     margin-left: 1em;
     margin-right: 1em;
+    margin-bottom: 1em;
     border: outset 1px lightgray;
 
 }
 
 .blog-articles {
-
+    margin-top: 2em;
 }
 
 .blog-articles article {
