@@ -45,9 +45,11 @@ header {
     transition: height 0.2s linear 0.2s, padding 0.2s linear 0s;
     overflow: hidden;
 }
+
 .nav-bar {
     display: flex;
 }
+
 .nav-bar a {
     font-family: "Roboto Slab", sans-serif;
     color: #000000;
@@ -78,7 +80,6 @@ header {
     transition: font-size .2s;
 
 }
-
 
 /* Flex-Containers */
 
@@ -171,6 +172,7 @@ section.module.parallax-1 {
     background-image: url("../img/tech.jpg");
     background-size: cover;
 }
+
 
 /* Articles */
 article {
@@ -281,6 +283,62 @@ article {
     transform: perspective(600px) rotateY(0deg);
 }
 
+/*image fade in*/
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.fade-in.one {
+    -webkit-animation-delay: 0.7s;
+    -moz-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+.fade-in.two {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
 /* Footer */
 
 footer {
@@ -311,3 +369,7 @@ footer {
     /*}*/
 
 }
+
+
+
+
