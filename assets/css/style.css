@@ -21,7 +21,7 @@ main {
 
 .container {
     width: 100%;
-    max-width: 960px;
+    /*max-width: 960px;*/
     margin: 0 auto;
     padding: 0 0;
 }
@@ -32,7 +32,7 @@ h1 {
 
 /* Header & Nav */
 header {
-    background-color: #ffffff;
+    background-color: rgba(255,255,255,.5);
     display: flex;
     position: fixed;
     height: 120px;
@@ -42,8 +42,9 @@ header {
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     align-items: center;
     padding-top: 50px;
-    transition: height 0.2s linear 0.2s, padding 0.2s linear 0s;
+    transition: height 0.2s linear 0.2s, padding 0.2s linear 0s, background-color .5s linear;
     overflow: hidden;
+    z-index: 100;
 }
 .nav-bar {
     display: flex;
@@ -74,11 +75,9 @@ header {
     font-weight: 300;
     font-size: 35px;
     padding: .5em;
-    color: darkslategray;
+    color: #464646;
     transition: font-size .2s;
-
 }
-
 
 /* Flex-Containers */
 
@@ -148,9 +147,7 @@ section.module.content {
 
 section.module.parallax {
     height: 600px;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: no-repeat fixed 50% 50%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -180,36 +177,32 @@ article {
 
 .container.blog-articles {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    width: 100%;
+    max-width: 1250px;
 }
 
 .featured-articles {
     display: flex;
     justify-content: center;
-    width: 960px;
+    /*width: 960px;*/
 }
 
 .featured-articles article {
     display: flex;
     flex-grow: 1;
-    max-width: 200px;
-    min-width: 200px;
     height: 300px;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 1em;
-    border: outset 1px lightgray;
-
+    box-shadow: 0 1px 3px #888888;
 }
 
 .blog-articles {
     margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .blog-articles article {
-    width: 45%;
     margin-bottom: 2.5em;
     /*padding: 1em;*/
 
@@ -226,36 +219,103 @@ article {
 
 }
 
+.blog-entry {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 400px;
+    height: auto;
+    max-height: 30em;
+    overflow: hidden;
+    margin: .5em;
+    justify-content: center;
+    box-shadow: 0 0 10px #888888;
+
+}
+.blog-entry img {
+    display: flex;
+    height: 200px;
+    width: auto;
+    order:1;
+    align-self: flex-start;
+}
+.title {
+    display: flex;
+    min-width: 300px;
+    min-height: 1.5em;
+    max-height: 2em;
+    background-color: #e1e1e1;
+    width: 100%;
+    font-size: 20px;
+}
+
+.blog-content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.blog-content {
+    order:4;
+}
+.blog-image {
+    width: 100%;
+    height: 200px;
+}
+#name {
+    display: flex;
+    order: 5;
+    align-self: flex-end;
+    margin: .25em;
+    max-height: 1em;
+}
+#datePosted {
+    display: flex;
+    order: 5;
+    align-self: flex-end;
+    margin: .25em;
+    max-height: 1em;
+}
+#blog-properties {
+    display: flex;
+    max-height: 1em;
+    margin-top: 1em;
+}
 #article-1 {
-    background: url("http://lorempixel.com/500/500/city") 50% 50% no-repeat;
+    background: url("../img/computer-virus-images.png") 50% 50% no-repeat;
+    background-size: contain;
 }
 
 #article-2 {
-    background: url("http://lorempixel.com/g/500/500/transport") 50% 50% no-repeat;
+    background: url("../img/upgrade.jpg") 50% 50% no-repeat;
+    background-size: contain;
 }
 
 #article-3 {
-    background: url("http://lorempixel.com/500/500/fashion") 50% 50% no-repeat;
+    background: url("../img/backup.jpg") 50% 50% no-repeat;
+    background-size: cover;
 }
 
 #article-4 {
-    background: url("http://lorempixel.com/500/500/people") 50% 50% no-repeat;
+    background: url("../img/help.jpg") 50% 50% no-repeat;
+    background-size: cover;
 }
 
 /* Flip Boxes*/
 /* In Development Phase */
 .flip3D {
-    width: 240px;
+    width: 220px;
     height: 200px;
-    margin: 10px;
+    margin: 5px;
     float: left;
+    z-index: 1;
+
 }
 
 .flip3D > .front {
     position: absolute;
     transform: perspective(600px) rotateY(0deg);
     background: #fc0;
-    width: 240px;
+    width: 220px;
     height: 200px;
     border-radius: 7px;
     backface-visibility: hidden;
@@ -265,12 +325,15 @@ article {
 .flip3D > .back {
     position: absolute;
     transform: perspective(600px) rotateY(180deg);
-    background: #33ffff;
-    width: 240px;
+    background: #ffffff;
+    width: 220px;
     height: 200px;
     border-radius: 7px;
     backface-visibility: hidden;
     transition: transform .5s linear 0s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .flip3D:hover > .front {
@@ -279,8 +342,20 @@ article {
 
 .flip3D:hover > .back {
     transform: perspective(600px) rotateY(0deg);
+
+
+
 }
 
+.flip3D article:nth-child(1) h1 {
+    margin: 1em;
+    font-weight: 600;
+}
+.flip3D article:nth-child(1) p {
+    margin: 1em;
+    padding-left: .5em;
+    padding-right: .5em;
+}
 /*image fade in*/
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn {
@@ -361,9 +436,6 @@ footer {
     }
 }
 
-@media all and (min-width: 960px) {
-    /*section.module.parallax h1 {*/
-    /*font-size: 160px;*/
-    /*}*/
+@media only screen and (min-width: 850px) and (max-width: 1270px) {
 
 }

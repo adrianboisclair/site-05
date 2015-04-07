@@ -7,11 +7,11 @@
     <meta name="author" content="Adrian Boisclair">
     <meta name="viewport" http-equiv="Content-Type" content="width=device-width, initial-scale=1">
     <title></title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body onload="getData()">
 <div class="wrapper">
     <header class="nav-bar" id="header">
         <div class="container flex-container" id="nav-nav-bar">
@@ -37,28 +37,46 @@
         </section>
         <section class="wrapper flex-container">
             <div class="flex-wrap featured-articles">
-                <article id="article-1">
-                </article>
-                <article id="article-2">
-                </article>
-                <article id="article-3">
-                </article>
-                <article id="article-4">
-                </article>
+                <div class="flip3D">
+                    <article class="back">
+                        <h1>Computer Viruses</h1>
+                        <p>Computer virus removal and repair.</p>
+                    </article>
+                    <article id="article-1" class="front"></article>
+                </div>
+                <div class="flip3D">
+                    <article class="back">
+                        <h1>Upgrade Your PC</h1>
+                        <p>Get your computer upgraded to give it some new found power.  </p>
+                    </article>
+                    <article id="article-2" class="front"></article>
+                </div>                <div class="flip3D">
+                    <article class="back">
+                        <h1>Backup/Restore</h1>
+                        <p>Save your files so that they are never lost!</p>
+                    </article>
+                    <article id="article-3" class="front"></article>
+                </div>                <div class="flip3D">
+                    <article class="back">
+                        <h1>Need Help?</h1>
+                        <p>Don't hesitate! Contact us today!</p>
+                    </article>
+                    <article id="article-4" class="front"></article>
+                </div>
             </div>
         </section>
         <section class="module content wrapper">
-            <div class="container blog-articles">
-                <article>
+            <div class="container blog-articles" id="myDiv">
+                <article class="blog-entry">
                     <h1>
-                        Article Header
+                        Computer Viruses
                     </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, amet, aspernatur, consequatur
                         corporis excepturi explicabo maiores numquam officiis perferendis praesentium saepe soluta
                         tenetur
                         velit. Dolores eos ipsa neque sint temporibus!</p>
                 </article>
-                <article>
+                <article class="blog-entry">
                     <h1>
                         Article Header
                     </h1>
@@ -69,7 +87,7 @@
                         numquam
                         voluptate voluptates.</p>
                 </article>
-                <article>
+                <article class="blog-entry">
                     <h1>
                         Article Header
                     </h1>
@@ -79,7 +97,7 @@
                         quasi
                         rem vel voluptatum!</p>
                 </article>
-                <article>
+                <article class="blog-entry">
                     <h1>
                         Article Header
                     </h1>
@@ -89,7 +107,7 @@
                         suscipit
                         vitae voluptatem voluptates. Culpa, quaerat?</p>
                 </article>
-                <article>
+                <article class="blog-entry">
                     <h1>
                         Article Header
                     </h1>
@@ -97,7 +115,7 @@
                         dignissimos dolores, dolorum esse excepturi impedit inventore minus obcaecati perferendis quasi
                         recusandae sequi sunt suscipit totam veniam!</p>
                 </article>
-                <article>
+                <article class="blog-entry">
                     <h1>
                         Article Header
                     </h1>
@@ -105,20 +123,6 @@
                         dignissimos dolores, dolorum esse excepturi impedit inventore minus obcaecati perferendis quasi
                         recusandae sequi sunt suscipit totam veniam!</p>
                 </article>
-                    <!--<section class="wrapper flex-container">-->
-                        <!--<div class="flip3D">-->
-                            <!--<div class="back">Box 1 - Back</div>-->
-                            <!--<div class="front">Box 1 - Front</div>-->
-                        <!--</div>-->
-                        <!--<div class="flip3D">-->
-                            <!--<div class="back">Box 2 - Back</div>-->
-                            <!--<div class="front">Box 2 - Front</div>-->
-                        <!--</div>-->
-                        <!--<div class="flip3D">-->
-                            <!--<div class="back">Box 3 - Back</div>-->
-                            <!--<div class="front">Box 3 - Front</div>-->
-                        <!--</div>-->
-                    <!--</section>-->
             </div>
 
         </section>
@@ -129,30 +133,7 @@
         </footer>
     </main>
 </div>
-<script async>
-    var header, logo, yPos;
-    function yScroll() {
-        header = document.getElementById('header');
-        logo = document.getElementById('logo');
-        link = document.getElementsByClassName("link");
-        yPos = window.pageYOffset;
-        if(yPos > 150) {
-            header.style.height = "64px";
-            header.style.paddingTop = "0px";
-            logo.style.fontSize = "20px";
-            for( var i = 0; i < link.length; i++) {
-                link[i].style.fontSize = "10px";
-            }
-        } else {
-            header.style.height="120px";
-            header.style.paddingTop = "50px";
-            logo.style.fontSize="35px";
-            for( var i = 0; i < link.length; i++) {
-                link[i].style.fontSize = "16px";
-            }
-        }
-    }
-    window.addEventListener("scroll", yScroll);
-</script>
+<script src="assets/js/script.js" async></script>
+<script src="assets/js/blogger.js" async></script>
 </body>
 </html>

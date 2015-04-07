@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .blog-entry {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            width: 30em;
+            height: 40em;
+            overflow: hidden;
+            border: 1px solid gray;
+        }
+        .blog-entry img {
+            display: flex;
+            height: auto;
+            width: 30em;
+            order:1;
+        }
+        .blog-entry:nth-child(2) {
+            width: 100%;
+            height: 10em;
+            border: 1px green solid;
+        }
+        .title {
+            display: flex;
+            min-width: 300px;
+            /*max-height: 5em;*/
+            background-color: red;
+            width: 100%;
+        }
+        .blog-content {
+            max-width: 30em;
+            order:4;
+        }
+        .blog-image {
+            width: 30em;
+            height: auto;
+        }
+        #name {
+            order: 5;
+        }
+        #datePosted {
+            order: 6;
+        }
+    </style>
+</head>
+<body>
+<div class="blog-entry" id="blog-entry-0">
+    <div class="title">Worst Style Ever Recorded In The History of Mankind...</div>
+    <div><img class="blog-image"
+              src="http://www.dhresource.com/albu_509533473_00-1.0x0/hombres-mujeres-unisex-harem-sudor-holgados.jpg">
+
+        <div class="blog-content">Great for at home, kicking back on the couch watching some YouTube on the LG Smart TV
+            mounted on the wall... but who can stand the way kids are wearing sweat pants nowadays, as if they're some
+            kind of high-end jean. &nbsp;Something needs to be done about this. &nbsp;My girlfriend would never let me
+            leave the house looking like this.
+        </div>
+    </div>
+    <div id="name">Posted By: Adrian Boisclair</div>
+    <div id="datePosted">2015-04-03T22:41:00-07:00</div>
+</div>
+</body>
+</html>
